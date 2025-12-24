@@ -12,5 +12,8 @@ font="noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji"
 xorg="xorg-server xorg-xinit xorg-xrandr xorg-xinput xorg-xsetroot xorg-xprop"
 system="bspwm sxhkd librewolf rofi rofi-bluetooth rofi-network-manager alacritty xfe xautolock brightnessctl playerctl asusctl"
 
-echo "install"
-yay -S --needed $driver $font $xorg $system
+echo "install-1"
+yay -S --needed $driver $font
+yay -Syu --noconfirm
+echo "install-2"
+yay -S --needed $xorg $system
