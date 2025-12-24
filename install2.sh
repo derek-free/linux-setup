@@ -34,7 +34,6 @@ echo '%wheel ALL=(ALL:ALL) ALL' >> /etc/sudoers
 
 echo "grub"
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot
-
 echo 'GRUB_DEFAULT=0' > /etc/default/grub
 echo 'GRUB_TIMEOUT=0' >> /etc/default/grub
 echo 'GRUB_DISTRIBUTOR="Arch"' >> /etc/default/grub
@@ -45,8 +44,11 @@ echo 'GRUB_TIMEOUT_STYLE=hidden' >> /etc/default/grub
 echo 'GRUB_GFXMODE=auto' >> /etc/default/grub
 echo 'GRUB_GFXPAYLOAD_LINUX=keep' >> /etc/default/grub
 echo 'GRUB_DISABLE_RECOVERY=true' >> /etc/default/grub
-
 grub-mkconfig -o /boot/grub/grub.cfg
+
+echo "multilib"
+echo "[multilib]" >> /etc/pacman.conf
+echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
 echo "systemctl"
 systemctl enable NetworkManager bluetooth
