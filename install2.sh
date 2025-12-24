@@ -1,42 +1,42 @@
 #!/bin/bash
 
-#date
+echo "date"
 ln -sf /usr/share/zoneinfo/Europe/Prague /etc/localtime
 hwclock --systohc
 
-#locale
+echo "locale"
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
 echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 locale-gen
 
-#hostname
+echo "hostname"
 echo "archlinux" > /etc/hostname
 
-#hosts
+echo "host"
 echo "127.0.0.1 localhost" > /etc/hosts
 echo "::1 localhost" >> /etc/hosts
 echo "127.0.0.1 archlinux" >> /etc/hosts
 
-#genshin_fix
+echo "host-genshin"
 echo "0.0.0.0 sg-public-data-api.hoyoverse.com" >> /etc/hosts
 echo "0.0.0.0 log-upload-os.hoyoverse.com" >> /etc/hosts
 
-#root_password
+echo "password-root"
 echo "root:mahou" | chpasswd
 
-#user
-passwd
+echo "password-user"
 useradd -m -G wheel -s /bin/bash derek_inc
 echo "derek_inc:mahou" | chpasswd
 
-#wheel_rule
+echo "rule-wheel"
 echo "%wheel ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
-#grub
+echo "grub"
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot
 grub-mkconfig -o /boot/grub/grub.cfg
 
+echo "systemctl"
 systemctl enable NetworkManager bluetooth
 
 echo "exit & reboot"
