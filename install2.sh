@@ -39,7 +39,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "systemctl"
 systemctl enable NetworkManager bluetooth
 
-echo "script"
+echo "move-script"
 mv /root/linux-setup /home/derek_inc/
 chown -R derek_inc:derek_inc /home/derek_inc/linux-setup
 
