@@ -1,0 +1,12 @@
+Section "InputClass"
+Identifier "touchpad"
+Driver "libinput"
+Option "AccelSpeed" "0.2"
+MatchIsTouchpad "on"
+Option "Tapping" "on"
+Option "DisableWhileTyping" "false"
+Option "NaturalScrolling" "true"
+Option "MiddleEmulation" "on"
+Option "TappingDrag" "true"
+Option "PalmDetection" "on"
+EndSection
