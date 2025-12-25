@@ -32,17 +32,17 @@ git clone 'https://aur.archlinux.org/alacritty-git.git'
 git clone 'https://aur.archlinux.org/asusctl.git'
 
 
-cd 'bspwm' && makepkg -si --noconfirm && cd '/tmp'
-cd 'sxhkd' && makepkg -si --noconfirm && cd '/tmp'
-cd 'bspwmbar' && makepkg -si --noconfirm && cd '/tmp'
+cd 'bspwm-git' && makepkg -si --noconfirm && cd '/tmp'
+cd 'sxhkd-git' && makepkg -si --noconfirm && cd '/tmp'
+cd 'bspwmbar-git' && makepkg -si --noconfirm && cd '/tmp'
 cd 'librewolf-bin' && makepkg -si --noconfirm && cd '/tmp'
-cd 'rofi' && makepkg -si --noconfirm && cd '/tmp'
-cd 'rofi-bluetooth' && makepkg -si --noconfirm && cd '/tmp'
-cd 'rofi-file-browser-extended' && makepkg -si --noconfirm && cd '/tmp'
-cd 'alacritty' && makepkg -si --noconfirm && cd '/tmp'
+cd 'rofi-git' && makepkg -si --noconfirm && cd '/tmp'
+cd 'rofi-bluetooth-git' && makepkg -si --noconfirm && cd '/tmp'
+cd 'rofi-file-browser-extended-git' && makepkg -si --noconfirm && cd '/tmp'
+cd 'alacritty-git' && makepkg -si --noconfirm && cd '/tmp'
 cd 'asusctl' && makepkg -si --noconfirm && cd '/tmp'
 
-rm -rf {bspwm,sxhkd,bspwmbar,librewolf-bin,rofi,rofi-bluetooth,rofi-file-browser-extended,alacritty,asusctl}
+rm -rf {bspwm-git,sxhkd-git,bspwmbar-git,librewolf-bin,rofi-git,rofi-bluetooth-git,rofi-file-browser-extended-git,alacritty-git,asusctl}
 cd
 
 sudo cp ~/dotfiles/xorg.conf /etc/X11/
