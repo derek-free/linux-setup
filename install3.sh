@@ -20,13 +20,16 @@ system="bspwm sxhkd librewolf rofi rofi-bluetooth rofi-network-manager alacritty
 sudo pacman -S --needed $driver $font $xorg $extra
 
 #aur
+git clone https://aur.archlinux.org/{bspwm,sxhkd,bspwmbar,librewolf-bin,rofi,rofi-bluetooth,rofi-file-browser-extended,alacritty,asusctl}.git
+
+
 cd /tmp
 git clone 'https://aur.archlinux.org/bspwm.git'
-cd /bspwm
+cd bspwm
 makepkg -si --noconfirm
-cd /tmp
+cd tmp
 git clone 'https://aur.archlinux.org/sxhkd.git'
-cd /sxhkd
+cd 'sxhkd'
 makepkg -si --noconfirm
 cd /tmp
 git clone 'https://aur.archlinux.org/bspwmbar.git'
