@@ -12,4 +12,5 @@ xset s off
 xset s noblank
 xset -dmps
 
-exec i3
+sxhkd &
+exec bspwm
