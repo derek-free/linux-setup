@@ -8,7 +8,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 #copy-script
 mkdir -p /mnt/root/linux-setup
-cp *.sh /mnt/root/linux-setup
+cp /mnt/root/linux-setup
 
 clear
 echo 'arch-chroot /mnt'
