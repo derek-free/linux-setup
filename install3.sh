@@ -6,7 +6,7 @@ sudo pacman -Syu
 #yay
 cd /tmp
 git clone https://aur.archlinux.org/yay-bin.git
-cd /yay-bin
+cd yay-bin
 makepkg -si --noconfirm
 cd
 
