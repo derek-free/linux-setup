@@ -21,15 +21,15 @@ sudo pacman -S --needed $driver $font $xorg $extra
 
 #aur
 cd /tmp
-git clone 'https://aur.archlinux.org/bspwm.git'
-git clone 'https://aur.archlinux.org/sxhkd.git'
-git clone 'https://aur.archlinux.org/bspwmbar.git'
+git clone 'https://aur.archlinux.org/bspwm-git.git'
+git clone 'https://aur.archlinux.org/sxhkd-git.git'
+git clone 'https://aur.archlinux.org/bspwmbar-git.git'
 git clone 'https://aur.archlinux.org/librewolf-bin.git'
-git clone 'https://aur.archlinux.org/rofi.git'
-git clone 'https://aur.archlinux.org/rofi-bluetooth.git'
-git clone 'https://aur.archlinux.org/rofi-file-browser-extended.git'
-git clone 'https://aur.archlinux.org/alacritty}.git'
-git clone 'https://aur.archlinux.org/asusctl}.git'
+git clone 'https://aur.archlinux.org/rofi-git.git'
+git clone 'https://aur.archlinux.org/rofi-bluetooth-git.git'
+git clone 'https://aur.archlinux.org/rofi-file-browser-extended-git.git'
+git clone 'https://aur.archlinux.org/alacritty-git.git'
+git clone 'https://aur.archlinux.org/asusctl.git'
 
 
 cd 'bspwm' && makepkg -si --noconfirm && cd '/tmp'
