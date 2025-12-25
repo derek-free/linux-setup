@@ -2,6 +2,8 @@
 
 #update
 sudo pacman -Syu
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
 
 #yay
 cd /tmp
