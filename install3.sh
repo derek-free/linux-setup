@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#update
+sudo pacman -Syu --noconfirm
+
 #yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
