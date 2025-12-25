@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "yay"
+#yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
@@ -12,13 +12,13 @@ font="noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji"
 xorg="xorg-server xorg-xinit xorg-xrandr xorg-xinput xorg-xsetroot xorg-xprop"
 system="bspwm sxhkd librewolf rofi rofi-bluetooth rofi-network-manager alacritty xfe steam xautolock brightnessctl playerctl asusctl"
 
-echo "install"
+#install
 yay -S --needed $driver $font
 
-echo "update"
+#update
 yay -Syu --noconfirm
 
-echo "install"
+#install
 yay -S --needed $xorg $system
 
 sudo cp ~/dotfiles/xorg.conf /etc/X11/
