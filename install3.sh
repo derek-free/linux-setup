@@ -23,4 +23,4 @@ yay -S --needed $driver $font $xorg $extra $system
 
 sudo cp ~/linux-setup/dotfiles/xorg.conf /etc/X11/
 sudo cp ~/linux-setup/dotfiles/.xinitrc ~/
-sudo cp ~/linux-setup/dotfiles/alacritty.toml ~/.config/alacritty/alacritty.toml
+sudo cp ~/linux-setup/dotfiles/alacritty.toml ~/.config/alacritty/
