@@ -20,46 +20,30 @@ system="bspwm sxhkd librewolf rofi rofi-bluetooth rofi-network-manager alacritty
 sudo pacman -S --needed $driver $font $xorg $extra
 
 #aur
-git clone https://aur.archlinux.org/{bspwm,sxhkd,bspwmbar,librewolf-bin,rofi,rofi-bluetooth,rofi-file-browser-extended,alacritty,asusctl}.git
-
-
 cd /tmp
 git clone 'https://aur.archlinux.org/bspwm.git'
-cd bspwm
-makepkg -si --noconfirm
-cd tmp
 git clone 'https://aur.archlinux.org/sxhkd.git'
-cd 'sxhkd'
-makepkg -si --noconfirm
-cd /tmp
 git clone 'https://aur.archlinux.org/bspwmbar.git'
-makepkg -si --noconfirm
-cd /tmp
-git clone 'https://aur.archlinux.org/librewolf.git'
-cd /librewolf-bin
-makepkg -si --noconfirm
-cd /tmp
+git clone 'https://aur.archlinux.org/librewolf-bin.git'
 git clone 'https://aur.archlinux.org/rofi.git'
-cd /rofi
-makepkg -si --noconfirm
-cd /tmp
 git clone 'https://aur.archlinux.org/rofi-bluetooth.git'
-cd /rofi-bluetooth
-makepkg -si --noconfirm
-cd /tmp
 git clone 'https://aur.archlinux.org/rofi-file-browser-extended.git'
-cd rofi-browser-extended
-makepkg -si --noconfirm
-cd /tmp
-git clone 'https://aur.archlinux.org/alacritty.git'
-cd /alacritty
-makepkg -si --noconfirm
-cd /tmp
-git clone 'https://aur.archlinux.org/asusctl.git'
-cd /asusctl
-makepkg -si --noconfirm
-cd
+git clone 'https://aur.archlinux.org/alacritty}.git'
+git clone 'https://aur.archlinux.org/asusctl}.git'
 
+
+cd 'bspwm' && makepkg -si --noconfirm && cd '/tmp'
+cd 'sxhkd' && makepkg -si --noconfirm && cd '/tmp'
+cd 'bspwmbar' && makepkg -si --noconfirm && cd '/tmp'
+cd 'librewolf-bin' && makepkg -si --noconfirm && cd '/tmp'
+cd 'rofi' && makepkg -si --noconfirm && cd '/tmp'
+cd 'rofi-bluetooth' && makepkg -si --noconfirm && cd '/tmp'
+cd 'rofi-file-browser-extended' && makepkg -si --noconfirm && cd '/tmp'
+cd 'alacritty' && makepkg -si --noconfirm && cd '/tmp'
+cd 'asusctl' && makepkg -si --noconfirm && cd '/tmp'
+
+rm -rf {bspwm,sxhkd,bspwmbar,librewolf-bin,rofi,rofi-bluetooth,rofi-file-browser-extended,alacritty,asusctl}
+cd
 
 sudo cp ~/dotfiles/xorg.conf /etc/X11/
 sudo cp ~/dotfiles/.xinitrc ~/
