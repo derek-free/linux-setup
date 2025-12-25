@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #date
-read -p 'region' region
-read -p 'city' city
+read -p 'region: ' region
+read -p 'city: ' city
 ln -sf /usr/share/zoneinfo/$region/$city /etc/localtime
 hwclock --systohc
 
@@ -28,7 +28,7 @@ echo '0.0.0.0 log-upload-os.hoyoverse.com' >> /etc/hosts
 passwd
 
 #password-user
-read -p 'user' user
+read -p 'user: ' user
 useradd -m -G wheel -s /bin/bash $user
 passwd $user
 
@@ -60,4 +60,5 @@ systemctl enable NetworkManager bluetooth
 mv /root/linux-setup /home/$user/
 chown -R $user:$user /home/$user/linux-setup
 
-echo "exit & reboot"
+exit
+reboot
