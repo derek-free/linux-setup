@@ -60,5 +60,5 @@ systemctl enable NetworkManager bluetooth
 mv /root/linux-setup /home/$user/
 chown -R $user:$user /home/$user/linux-setup
 
-exit
-reboot
+clear
+echo 'exit & reboot'
