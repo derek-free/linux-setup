@@ -23,7 +23,7 @@ sudo pacman -S --needed $driver $font $xorg $extra
 cd /tmp
 git clone 'https://aur.archlinux.org/bspwm-git.git'
 git clone 'https://aur.archlinux.org/sxhkd-git.git'
-git clone 'https://aur.archlinux.org/bspwmbar-git.git'
+git clone 'https://aur.archlinux.org/polybar-git.git'
 git clone 'https://aur.archlinux.org/librewolf-bin.git'
 git clone 'https://aur.archlinux.org/rofi-git.git'
 git clone 'https://aur.archlinux.org/rofi-bluetooth-git.git'
@@ -34,7 +34,7 @@ git clone 'https://aur.archlinux.org/asusctl.git'
 
 cd 'bspwm-git' && makepkg -si --noconfirm && cd '/tmp'
 cd 'sxhkd-git' && makepkg -si --noconfirm && cd '/tmp'
-cd 'bspwmbar-git' && makepkg -si --noconfirm && cd '/tmp'
+cd 'polybar-git' && makepkg -si --noconfirm && cd '/tmp'
 cd 'librewolf-bin' && makepkg -si --noconfirm && cd '/tmp'
 cd 'rofi-git' && makepkg -si --noconfirm && cd '/tmp'
 cd 'rofi-bluetooth-git' && makepkg -si --noconfirm && cd '/tmp'
