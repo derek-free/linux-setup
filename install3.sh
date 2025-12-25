@@ -21,6 +21,8 @@ system="bspwm sxhkd polybar librewolf-bin xfe dmenu alacritty steam"
 #install
 yay -S --needed $driver $font $xorg $extra $system
 
-sudo cp ~/linux-setup/dotfiles/xorg.conf /etc/X11/
 sudo cp ~/linux-setup/dotfiles/.xinitrc ~/
+sudo mkdir -p /etc/X11
+sudo cp ~/linux-setup/dotfiles/xorg.conf /etc/X11/
+sudo mkdir -p ~/.config/alacritty
 sudo cp ~/linux-setup/dotfiles/alacritty.toml ~/.config/alacritty/
