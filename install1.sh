@@ -6,6 +6,10 @@ pacstrap -K /mnt base linux-lts linux-firmware sof-firmware base-devel sudo nano
 #genfstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
+#bluetooth
+echo 'AutoEnable=true' >> /etc/bluetooth/main.conf
+echo 'FastConnectable=true' >> /etc/bluetooth/main.conf
+
 #copy-script
 mkdir -p /mnt/root/linux-setup
 cp -a ~/linux-setup/. /mnt/root/linux-setup
